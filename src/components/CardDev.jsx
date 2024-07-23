@@ -3,14 +3,14 @@ import { useDevs } from '../hooks/useDevs'
 
 function CardDev ({ item }) {
   const [enableEdit, setEnableEdit] = useState(true)
-  const { updateDev } = useDevs()
+  const { updateDev, deleteDev } = useDevs()
 
   const handleClickEdit = () => {
     setEnableEdit(!enableEdit)
   }
 
   const handleClickDelete = () => {
-    console.log('delete')
+    deleteDev(item)
   }
 
   const handleChangeValue = (event) => {

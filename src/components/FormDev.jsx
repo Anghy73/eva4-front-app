@@ -45,7 +45,7 @@ function FormDev () {
 
   return (
     <>
-      <form className='flex flex-col bg-black text-white border-2 border-gray-300 p-10 rounded-xl font-semibold text-xl' onSubmit={handleSubmit}>
+      <form className='flex flex-col h-fit bg-black text-white border-2 border-gray-300 p-10 rounded-xl font-semibold text-xl' onSubmit={handleSubmit}>
         <div className='flex flex-col gap-3'>
           <div className='flex flex-col'>
             <label className='mb-2'>Name</label>
@@ -74,8 +74,8 @@ function FormDev () {
         </div>
 
         <div className='mt-5 flex justify-around items-center gap-5'>
-          <button className='w-full border-2 rounded py-2 hover:bg-gray-800' type='button' onClick={handleClickClear}>Clear</button>
-          <button className='w-full border-2 rounded py-2 hover:bg-gray-800' type='submit'>Save</button>
+          <button className='w-full border-2 rounded py-2 hover:bg-sky-950' type='button' onClick={handleClickClear}>Clear</button>
+          <button className='w-full border-2 rounded py-2 hover:bg-emerald-950' type='submit'>Save</button>
         </div>
       </form>
     </>

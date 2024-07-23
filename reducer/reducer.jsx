@@ -1,24 +1,3 @@
-// const a = [
-//   {
-//     id: Date.now(),
-//     name: 'andy',
-//     lastname: 'ruz',
-//     age: '19',
-//     area: 'Fronted',
-//     exp: '1 year',
-//     favL: 'JavaScript'
-//   },
-//   {
-//     id: `${Date.now() + 100}`,
-//     name: 'andy2',
-//     lastname: 'ruz',
-//     age: '19',
-//     area: 'Fronted',
-//     exp: '1 year',
-//     favL: 'JavaScript'
-//   }
-// ]
-
 export const reducerInitialState = JSON.parse(window.localStorage.getItem('devs')) || []
 
 export const updateLocalStorage = state => {
@@ -69,6 +48,13 @@ export const reducer = (state, action) => {
         return dev
       })
 
+      updateLocalStorage(newState)
+      return newState
+    }
+
+    case 'DELETE_DEV': {
+      const { id } = actionPayload
+      const newState = state.filter(dev => dev.id !== id)
       updateLocalStorage(newState)
       return newState
     }

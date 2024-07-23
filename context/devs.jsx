@@ -16,11 +16,17 @@ export function DevsProvider ({ children }) {
     payload: product
   })
 
+  const deleteDev = product => dispatch({
+    type: 'DELETE_DEV',
+    payload: product
+  })
+
   return (
     <DevsContext.Provider value={{
       devs: state,
       addDev,
-      updateDev
+      updateDev,
+      deleteDev
     }}
     >
       {children}
