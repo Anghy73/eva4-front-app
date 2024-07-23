@@ -1,3 +1,4 @@
+import { Toaster, toast } from 'sonner'
 import { useState } from 'react'
 import { useDevs } from '../hooks/useDevs'
 
@@ -35,6 +36,7 @@ function FormDev () {
       exp,
       favL
     })
+    toast.success('has been successfully created')
 
     setValores(valoresIniciales)
   }
@@ -75,6 +77,7 @@ function FormDev () {
 
         <div className='mt-5 flex justify-around items-center gap-5'>
           <button className='w-full border-2 rounded py-2 hover:bg-sky-950' type='button' onClick={handleClickClear}>Clear</button>
+          <Toaster position='top-center' richColors />
           <button className='w-full border-2 rounded py-2 hover:bg-emerald-950' type='submit'>Save</button>
         </div>
       </form>

@@ -4,8 +4,6 @@ import { useDevs } from '../hooks/useDevs'
 function TableDev () {
   const { devs } = useDevs()
 
-  console.log(devs)
-
   return (
     <>
       <div className='flex justify-center items-center flex-wrap gap-5 bg-black w-screen rounded-xl'>

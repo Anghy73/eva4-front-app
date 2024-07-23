@@ -1,3 +1,5 @@
+import { Toaster, toast } from 'sonner'
+
 import { useState } from 'react'
 import { useDevs } from '../hooks/useDevs'
 
@@ -11,6 +13,7 @@ function CardDev ({ item }) {
 
   const handleClickDelete = () => {
     deleteDev(item)
+    toast.success('has been successfully removed')
   }
 
   const handleChangeValue = (event) => {
@@ -52,6 +55,7 @@ function CardDev ({ item }) {
         <button className={!enableEdit ? 'w-full border-2 border-white py-2 rounded bg-gray-800' : 'w-full border-2 border-white py-2 rounded hover:bg-gray-800'} onClick={handleClickEdit}>Edit</button>
         <button className='w-full border-2 border-white py-2 rounded hover:bg-gray-800' onClick={handleClickDelete}>Delete</button>
       </div>
+      <Toaster position='top-center' richColors />
     </div>
   )
 }
