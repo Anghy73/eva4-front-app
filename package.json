@@ -1,6 +1,7 @@
 {
   "name": "andy-ruz-app",
   "private": true,
+  "homepage": "https://anghy73.github.io/eva4-front-app/dist",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
