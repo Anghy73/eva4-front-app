@@ -52,8 +52,8 @@ function CardDev ({ item }) {
       </div>
 
       <div className='flex justify-center mt-5 gap-5'>
-        <button className={!enableEdit ? 'w-full border-2 border-white py-2 rounded bg-gray-800' : 'w-full border-2 border-white py-2 rounded hover:bg-gray-800'} onClick={handleClickEdit}>Edit</button>
-        <button className='w-full border-2 border-white py-2 rounded hover:bg-gray-800' onClick={handleClickDelete}>Delete</button>
+        <button className={!enableEdit ? 'w-full border-2 border-white py-2 rounded bg-gray-800' : 'w-full border-2 border-white py-2 rounded hover:bg-sky-950'} onClick={handleClickEdit}>Edit</button>
+        <button className='w-full border-2 border-white py-2 rounded hover:bg-rose-950' onClick={handleClickDelete}>Delete</button>
       </div>
       <Toaster position='top-center' richColors />
     </div>
